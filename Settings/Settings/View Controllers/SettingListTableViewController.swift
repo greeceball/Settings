@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SettingListTableViewController: UITableViewController {
+class SettingListTableViewController: UITableViewController{
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,18 @@ class SettingListTableViewController: UITableViewController {
         
         let setting = SettingsController.settings[indexPath.row]
         cell.updateViews(with: setting)
+        cell.delegate = self
 
         return cell
+    }
+}
+
+extension SettingListTableViewController: SettingTableViewCellDelegate {
+    func settingSwitchTapped(for cell: SettingTableViewCell) {
+        //tableViewController -> modelController to update the isOn -> Cell update
+        guard let index = tableView.indexPath(for: cell) else {return}
+        let setting = SettingsController.settings[index.row]
+        SettingsController.toggleIsOn(for: setting)
+        cell.updateViews(with: setting)
     }
 }
