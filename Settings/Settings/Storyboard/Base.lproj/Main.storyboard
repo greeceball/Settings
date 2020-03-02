@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sKz-ek-EPu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,9 +29,26 @@
                                                 <constraint firstAttribute="width" secondItem="pjG-sm-qMh" secondAttribute="height" multiplier="1:1" id="oA8-ym-omK"/>
                                             </constraints>
                                         </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="1RJ-Ms-Ien">
+                                            <rect key="frame" x="60" y="59" width="346" height="31"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5q-wo-nfV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A5T-Xb-z6Q">
+                                                    <rect key="frame" x="297" y="0.0" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="1RJ-Ms-Ien" firstAttribute="leading" secondItem="pjG-sm-qMh" secondAttribute="trailing" constant="8" id="30u-gv-WUi"/>
+                                        <constraint firstAttribute="trailing" secondItem="1RJ-Ms-Ien" secondAttribute="trailing" constant="8" id="7eG-gC-M05"/>
                                         <constraint firstItem="pjG-sm-qMh" firstAttribute="leading" secondItem="dao-4K-Kch" secondAttribute="leading" constant="8" id="C8b-p3-Kee"/>
+                                        <constraint firstItem="1RJ-Ms-Ien" firstAttribute="centerY" secondItem="dao-4K-Kch" secondAttribute="centerY" id="qhB-eW-bvv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
