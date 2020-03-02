@@ -17,12 +17,12 @@ import UIKit
  
  */
 class Setting {
-    let settingTitle: String
+    let settingName: String
     let icon: UIImage
     var isOn: Bool
     
-    init(settingTitle: String, icon: UIImage, isOn: Bool) {
-        self.settingTitle = settingTitle
+    init(settingName: String, icon: UIImage, isOn: Bool) {
+        self.settingName = settingName
         self.icon = icon
         self.isOn = isOn
     }
